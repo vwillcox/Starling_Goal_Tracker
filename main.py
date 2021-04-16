@@ -13,6 +13,8 @@ APIKEY = apikey.api_key
 
 my_account = StarlingAccount(APIKEY)
 
+def percentage(part, whole):
+    return 100 * float(part)/float(whole)
 
 #Fetch Details from Starling Account 
 my_account.update_account_data()
@@ -47,6 +49,9 @@ target = '£'+ target
 total = str(round(gtotal / 100))
 total = '£' + total
 
+percent = str(round(percentage(gtotal, gtarget))) + '%'
+
+
 funds = gname
 w, h = font.getsize(funds)
 x = (inkyphat.WIDTH / 2) - (w / 2)
@@ -68,7 +73,7 @@ draw.text((75, 43), total, inkyphat.RED, font)
 draw.text((160, 33), 'Target', inkyphat.BLACK, sfont)
 draw.text((152, 43), target, inkyphat.RED, font)
 draw.line((70, 75, inkyphat.WIDTH, 75), 2)      # Horizontal middle line
-
+draw.text((72, 78), percent, inkyphat.RED, font)
 
 inkyphat.set_image(img)
 
