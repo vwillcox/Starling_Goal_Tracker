@@ -57,11 +57,10 @@ target = '£'+ target
 total = str(round(gtotal / 100))
 total = '£' + total
 
-# Using Font Awsome 6 FREE - 
+# Using Font Awsome 6 FREE 
 symbol = u""
 pro_symbol = u""
 percent = str(round(percentage(gtotal, gtarget))) + '%'
-
 
 funds = gname
 w, h = font.getsize(funds)
@@ -77,7 +76,6 @@ draw.text((x, 3),funds, inkyphat.BLACK, font)
 #draw fund image and fund image line
 draw.line((70, 30, 70, inkyphat.HEIGHT), 2)       # Vertical line
 draw.text((1, 40), symbol, inkyphat.RED, fa)
-
 
 #draw current total line and text
 draw.line((150, 30, 150, 75), 2)
