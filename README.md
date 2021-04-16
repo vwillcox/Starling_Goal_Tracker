@@ -12,4 +12,8 @@ sudo pip3 install starlingbank
 
 [url]https://github.com/Dullage/starlingbank[/url]
 
-You will also need to setup 
+You will also need to setup a Starling Developer account, link it to your own Starling Bank account and get an API Key
+
+Once you have an API key, create a file called "apikey.py" and put the following in:
+
+api_key = <YOUR API KEY>
