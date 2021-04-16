@@ -7,8 +7,11 @@ from font_fredoka_one import FredokaOne
 from PIL import Image, ImageDraw, ImageFont
 from inky import InkyPHAT
 from starlingbank import StarlingAccount
+import pathlib
 
 import apikey
+
+path = str(pathlib.Path().absolute())
 
 APIKEY = apikey.api_key
 
@@ -29,9 +32,9 @@ inkyphat.set_border(inkyphat.RED)
 
 font = ImageFont.truetype(FredokaOne, 22)
 small_font = ImageFont.truetype(FredokaOne, 12)
-sfont = ImageFont.truetype('/home/vincent/starling/aer.ttf', 10)
+sfont = ImageFont.truetype(path+'/aer.ttf', 10)
 #Font Awesome 6 free font - Download the file from FontAwesome
-fa = ImageFont.truetype("/home/vincent/starling/fa-regular-400.ttf", 60)
+fa = ImageFont.truetype(path+"/fa-regular-400.ttf", 60)
 #Font Awwsome 6 Pro font (not included with GIT due to licence restructions)
 #fapro = ImageFont.truetype("/home/vincent/starling/fa-brands-400.ttf", 60)
 
