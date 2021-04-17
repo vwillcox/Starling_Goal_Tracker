@@ -57,6 +57,7 @@ total = '£' + total
 symbol = u""
 pro_symbol = u""
 percent = str(round(percentage(gtotal, gtarget))) + '%'
+percent_bar_size = percentage(gtotal, gtarget) / 100 * 212
 
 funds = gname
 w, h = font.getsize(funds)
@@ -69,8 +70,8 @@ draw.line((0, 30, inkyphat.WIDTH, 30), 2)
 draw.text((x, 3),funds, inkyphat.BLACK, font)
 
 #draw fund image and fund image line
-draw.line((70, 30, 70, inkyphat.HEIGHT), 2)       # Vertical line
-draw.text((1, 40), symbol, inkyphat.RED, fa)
+draw.line((70, 30, 70, 75), 2)       # Vertical line
+draw.text((1, 22), symbol, inkyphat.RED, fa)
 
 #draw current total line and text
 draw.line((150, 30, 150, 75), 2)
@@ -79,7 +80,9 @@ draw.text((75, 43), total, inkyphat.RED, font)
 draw.text((160, 33), 'Target', inkyphat.BLACK, sfont)
 draw.text((152, 43), target, inkyphat.RED, font)
 draw.line((70, 75, inkyphat.WIDTH, 75), 2)      # Horizontal middle line
-draw.text((72, 78), percent, inkyphat.RED, font)
+#draw.rectangle(((70, 75), (120, 150)), fill=inkyphat.RED, outline=inkyphat.BLACK)
+draw.rectangle(((0, 75), (percent_bar_size, 150)), fill=inkyphat.RED, outline=inkyphat.BLACK)
+draw.text((72, 78), percent, inkyphat.BLACK, font)
 inkyphat.set_image(img)
 
 inkyphat.show()
