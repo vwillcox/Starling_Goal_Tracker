@@ -1,4 +1,4 @@
-#!/user/bin/env python3
+#!/usr/bin/python3.7
 # -*- coding: utf-8 -*-
 
 import os, time
@@ -8,7 +8,6 @@ from PIL import Image, ImageDraw, ImageFont
 from inky import InkyPHAT
 from starlingbank import StarlingAccount
 import pathlib
-
 import apikey
 
 path = str(pathlib.Path().absolute())
@@ -43,9 +42,6 @@ fa = ImageFont.truetype(path+"/fa-regular-400.ttf", 60)
 img = Image.new("P", (inkyphat.WIDTH, inkyphat.HEIGHT))
 draw = ImageDraw.Draw(img)
 
-#balance = str(my_account.savings_goals.total_saved_minor_units)
-#balance = '£' + balance
-
 for uid, goal in my_account.savings_goals.items():
     gname = goal.name
     gtarget = goal.target_minor_units
@@ -66,7 +62,6 @@ funds = gname
 w, h = font.getsize(funds)
 x = (inkyphat.WIDTH / 2) - (w / 2)
 y = (inkyphat.HEIGHT / 2) - (h / 2)
-
 
 #draw.text((x, y), balance, inkyphat.RED, font)
 #Draw title and title line
