@@ -12,10 +12,12 @@ or
 
 or
 
-sudo pip3 install starlingbank
+* sudo pip3 install starlingbank
 
+##Installs the following Library
 
-https://github.com/Dullage/starlingbank
+	https://github.com/Dullage/starlingbank
+
 You will also need to setup a Starling Developer account, link it to your own Starling Bank account and get an API Key
 
 Once you have an API key, create a file called "apikey.py" and put the following in:
@@ -31,16 +33,16 @@ You can specify the following switches
 
 for example:
 
-python3 main.py -c
+	python3 main.py -c
 
-	This will show all the screens, once with the default time of 60 seconds between each screen
+This will show all the screens, once with the default time of 60 seconds between each screen
 
-python3 main.py -t 10
+	python3 main.py -t 10
 
-	This will show just your saving goals with a time delay of 10 seconds between each screen
+This will show just your saving goals with a time delay of 10 seconds between each screen
 
-python3 main.py -l -t 120
+	python3 main.py -l -t 120
 
-	This will loop the Savings goals with 120 seconds between each screen
+This will loop the Savings goals with 120 seconds between each screen
 
 
