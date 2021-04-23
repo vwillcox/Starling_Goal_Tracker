@@ -50,8 +50,11 @@ api_key = YOUR API KEY
 You can specify the following switches
 
 -c / --current : Show you current account balance of your Starling Account
+
 -l / --loop : Loop the code until manually stopped
+
 -t / --time : How long to wait on each screen
+
 
 for example:
 
