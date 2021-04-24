@@ -87,11 +87,11 @@ while True:
         draw.text((x, 3),funds, inkyphat.BLACK, font)
         draw.line((70, 30, 70, 75), 2)       # Vertical line
         draw.text((1, 22), symbol, inkyphat.RED, fa)
-        draw.line((150, 30, 150, 75), 2)
+        draw.line((143, 30, 143, 75), 2)
         draw.text((75, 33), 'Current Total', inkyphat.BLACK, sfont)
         draw.text((75, 43), total, inkyphat.RED, font)
-        draw.text((160, 33), 'Target', inkyphat.BLACK, sfont)
-        draw.text((152, 43), target, inkyphat.RED, font)
+        draw.text((144, 33), 'Target', inkyphat.BLACK, sfont)
+        draw.text((144, 43), target, inkyphat.RED, font)
         draw.line((70, 75, inkyphat.WIDTH, 75), 2)      # Horizontal middle line
         draw.rectangle(((0, 75), (percent_bar_size, 150)), fill=inkyphat.RED, outline=inkyphat.BLACK)
         draw.text((72, 78), percent, inkyphat.BLACK, font)
